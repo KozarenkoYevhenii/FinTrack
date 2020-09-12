@@ -1,0 +1,23 @@
+.header{
+    background-color: rgb(57, 56, 114);
+    /* color: rgb(223, 223, 246); */
+    color: rgb(216, 215, 218);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    font-size: 28px;
+    height: 54px;
+    /* box-sizing: border-box; */
+}
+.logo-wrapper{
+    display: flex;
+    align-items: center;
+}
+img{
+    width: 50px;
+    margin-right: 10px;
+}
+.balance-wrapper{
+    font-size: 20px;
+}
