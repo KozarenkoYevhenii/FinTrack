@@ -2,15 +2,15 @@ import React from "react";
 import Select from "react-select";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import "./New Charge.css";
+import "./New Income.css";
 
 const options = [
-  { value: "food", label: "food" },
-  { value: "clothes", label: "clothes" },
-  { value: "car", label: "car" },
+  { value: "salary", label: "work" },
+  { value: "book ", label: "book" },
+  { value: "mom", label: "mom" },
 ];
 
-export default class NewCharge extends React.Component {
+export default class NewIncome extends React.Component {
   state = {
     selectedOption: null,
     startDate: new Date(),
@@ -30,10 +30,10 @@ export default class NewCharge extends React.Component {
 
     return (
       <>
-        <div className="charge-wrapper">
-          <div>New charge</div>
+        <div className="income-wrapper">
+          <div>New income</div>
           <div>
-            <form className="newCharge-form">
+            <form className="newIncome-form">
               <label> Total </label>
               <input
                 name="total"
@@ -48,7 +48,7 @@ export default class NewCharge extends React.Component {
                 //   value={this.state.search}
                 //   onChange={this.handleSearchChange}
               ></input>
-              <label> Select category </label>
+              <label> Select category of income </label>
               <Select
                 className="select-line"
                 value={selectedOption}
@@ -63,7 +63,7 @@ export default class NewCharge extends React.Component {
                 />
               </div>
               <button className="button" name="Add new category">
-                Add new charge
+                Add new income
               </button>
             </form>
           </div>
