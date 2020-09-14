@@ -1,6 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import Select from "react-select";
-import "./newCategory.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import "./categories.css";
 
 const options = [
   { value: "food", label: "food" },
@@ -8,27 +10,34 @@ const options = [
   { value: "car", label: "car" },
 ];
 
-export default class newCategory extends React.Component {
+export default class NewCharge extends React.Component {
   state = {
     selectedOption: null,
+    startDate: new Date(),
   };
+
   handleChange = (selectedOption) => {
     this.setState({ selectedOption });
     console.log(`Option selected:`, selectedOption);
+  };
+  handleChangeDate = (date) => {
+    this.setState({
+      startDate: date,
+    });
   };
   render() {
     const { selectedOption } = this.state;
 
     return (
       <>
-        <div className="category-wrapper">
-          <div>New category</div>
+        <div className="charge-wrapper">
+          <div>New charge</div>
           <div>
-            <form className="newCategory-form">
-              <label> Name </label>
+            <form className="newCharge-form">
+              <label> Total </label>
               <input
-                name="Name"
-                placeholder="Enter name of category"
+                name="total"
+                placeholder=""
                 //   value={this.state.search}
                 //   onChange={this.handleSearchChange}
               ></input>
@@ -39,13 +48,20 @@ export default class newCategory extends React.Component {
                 //   value={this.state.search}
                 //   onChange={this.handleSearchChange}
               ></input>
-              <label> Select icon </label>
+              <label> Select category </label>
               <Select
                 className="select-line"
                 value={selectedOption}
                 onChange={this.handleChange}
                 options={options}
               />
+              <div className="date-wrapper">
+                <div>Date</div>
+                <DatePicker
+                  selected={this.state.startDate}
+                  onChange={this.handleChangeDate}
+                />
+              </div>
               <button className="button" name="Add new category">
                 Add new category
               </button>
