@@ -14,7 +14,9 @@ function App() {
       <div className="container">
         <Navbar />
         <div className="content">
-          <Route exact path='/'><Redirect to="/home" /></Route>
+          <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
           <Route path="/home" component={Home} />
           <Route path="/charts" component={Charts} />
           <Route path="/categories" component={Categories} />

@@ -1,0 +1,36 @@
+.category-wrapper {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  margin: 10px;
+}
+
+.newCategory-form {
+  margin-top: 20px;
+
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+.button {
+  padding: 10px;
+  margin-top: 15px;
+  background-color: rgb(57, 56, 114);
+  color: aliceblue;
+  border: solid rgb(170, 169, 236);
+  border-radius: 5px;
+}
+input {
+  box-sizing: border-box;
+  height: 35px;
+  padding: 7px;
+  border: solid lightgray 0.5px;
+  border-radius: 5px;
+}
+label {
+  padding-top: 10px;
+}
