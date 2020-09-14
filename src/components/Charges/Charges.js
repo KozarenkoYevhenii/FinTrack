@@ -1,32 +1,11 @@
 import React, { Component } from 'react';
-import './Home.css';
-import Charges from '../Charges/Charges';
-import Incomes from '../Incomes/Incomes';
-import { Route, Redirect } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import '../Home/Home.css';
 
-class Home extends Component {
+export default class Charges extends Component {
     render(){
         return(
-            <div className="home-page">
-                <div className="charges-incomes-wrapper">
-                    <div className="charges-incomes">
-                        {/* Charges */}
-                        <NavLink to="/home/charges">Charges</NavLink>
-                    </div>
-                    <div className="charges-incomes">
-                        {/* Incomes */}
-                        <NavLink to="/home/incomes">Incomes</NavLink>
-                    </div>
-                </div>
-                <div>
-                    <Route exact path="/home">
-                        <Redirect to="/home/charges" />
-                    </Route>
-                    <Route path="/home/charges" component={Charges} />
-                    <Route path="/home/incomes" component={Incomes} />
-                </div>
-                {/* <div className="select-panel">
+            <div>
+                <div className="select-panel">
                     <label>
                         <span>My Charges</span>
                         <select className="period-input">
@@ -81,11 +60,8 @@ class Home extends Component {
                         <td>$10</td>
                         <td>...</td>
                     </tr>
-                </table> */}
+                </table>
             </div>
         )
     }
-        
 }
-
-export default Home;

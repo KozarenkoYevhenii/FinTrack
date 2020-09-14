@@ -15,6 +15,11 @@
 .charges-incomes:hover{
     border-bottom: 1px solid rgb(57, 56, 114);
 }
+.charges-incomes a{
+    text-decoration: none;
+    color: rgb(57, 56, 114);
+    font-weight: bold;
+}
 .select-panel{
     display: flex;
     justify-content: space-between;
