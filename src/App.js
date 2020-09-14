@@ -6,10 +6,16 @@ import Home from "./components/Home/Home";
 import Charts from "./components/Charts/Charts";
 import { Route, Redirect } from "react-router-dom";
 import Categories from "./components/Categories/Categories";
+import NewCategory from "./components/New Category/NewCategory";
+import NewIncome from "./components/New Income/New Income";
+import NewCharge from "./components/New Charge/New Charge";
 
 function App() {
   return (
     <div className="App">
+      {/* {<NewCategory />}
+      {<NewCharge />}
+      {<NewIncome />} */}
       <Header />
       <div className="container">
         <Navbar />

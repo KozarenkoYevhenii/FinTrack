@@ -1,6 +1,6 @@
 import React from "react";
 import Select from "react-select";
-import "./newCategory.css";
+import "./NewCategory.css";
 
 const options = [
   { value: "food", label: "food" },
