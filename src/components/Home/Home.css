@@ -53,3 +53,6 @@ select{
 .home-table td:nth-child(5), .home-table th:nth-child(5){
     width: 30px;
 }
+.home-table td:nth-child(5){
+    text-align: center;
+}

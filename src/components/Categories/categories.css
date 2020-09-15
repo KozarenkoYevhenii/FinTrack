@@ -12,3 +12,6 @@
 .categories-table td:nth-child(3), .categories-table th:nth-child(3) {
     width: 30px;
 }
+.categories-table td:nth-child(3){
+    text-align: center;
+}
