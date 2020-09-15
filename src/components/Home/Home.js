@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
-import Charges from '../Charges/Charges';
-import Incomes from '../Incomes/Incomes';
+import Charges from './Charges';
+import Incomes from './Incomes';
 import { Route, Redirect } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 

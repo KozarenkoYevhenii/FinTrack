@@ -29,13 +29,25 @@ table {
     border-collapse: collapse;
     margin-top: 30px;
     width: 100%;
+    float: left;
+}
+thead {
+    display: block;
+    width: 100%;
+}
+tbody {
+    display: block;
+    overflow-y: scroll;
+    max-height:320px;
 }
 th{
     background-color: rgb(57, 56, 114);
     color: rgb(223, 223, 246);
 }
 th, td {
-    /* border: 0px; */
     padding: 15px;
     text-align: left;
+}
+thead th, tbody td {
+    width: 350px;
 }

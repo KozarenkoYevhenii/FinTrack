@@ -23,6 +23,7 @@
 .select-panel{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 label span{
     margin-right: 20px;
@@ -33,4 +34,22 @@ select{
     /* outline: none; */
     border-style: none;
     font-size: 15px;
+}
+
+.home-table td:nth-child(1), .home-table th:nth-child(1){
+    width: 200px;
+}
+  
+.home-table td:nth-child(2), .home-table th:nth-child(2){
+    width: 493px;
+}
+  
+.home-table td:nth-child(3), .home-table th:nth-child(3){
+    width: 100px;
+}
+.home-table td:nth-child(4), .home-table th:nth-child(4){
+    width: 100px;
+}
+.home-table td:nth-child(5), .home-table th:nth-child(5){
+    width: 30px;
 }

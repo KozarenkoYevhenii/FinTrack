@@ -1,0 +1,14 @@
+.categories-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.categories-table td:nth-child(1), .categories-table th:nth-child(1){
+    width: 200px;
+}
+.categories-table td:nth-child(2), .categories-table th:nth-child(2) {
+    width: 754px;
+} 
+.categories-table td:nth-child(3), .categories-table th:nth-child(3) {
+    width: 30px;
+}
