@@ -1,28 +1,23 @@
 import React from "react";
 import Select from "react-select";
 import "./NewCategory.css";
-
-const options = [
-  { value: "food", label: "food" },
-  { value: "clothes", label: "clothes" },
-  { value: "car", label: "car" },
-];
-
+import CategoryIcons from "./CategoryIcons";
 export default class NewCategory extends React.Component {
-  state = {
-    selectedOption: null,
-  };
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption });
-    console.log(`Option selected:`, selectedOption);
-  };
+  // state = {
+  //   selectedOption: null,
+  // };
+  // handleChange = (selectedOption) => {
+  //   this.setState({ selectedOption });
+  //   console.log(`Option selected:`, selectedOption);
+  // };
   render() {
-    const { selectedOption } = this.state;
+    // const { selectedOption } = this.state;
 
     return (
       <>
         <div className="category-wrapper">
           <div>New category</div>
+
           <div>
             <form className="newCategory-form">
               <label> Name </label>
@@ -39,13 +34,8 @@ export default class NewCategory extends React.Component {
                 //   value={this.state.search}
                 //   onChange={this.handleSearchChange}
               ></input>
-              <label> Select icon </label>
-              <Select
-                className="select-line"
-                value={selectedOption}
-                onChange={this.handleChange}
-                options={options}
-              />
+              <CategoryIcons />
+
               <button className="button" name="Add new category">
                 Add new category
               </button>

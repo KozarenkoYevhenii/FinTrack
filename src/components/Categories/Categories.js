@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import ChargesCategories from './ChargesCategories';
-import IncomesCategories from './IncomesCategories';
-import './Categories.css';
+import ChargesCategories from "./ChargesCategories";
+import IncomesCategories from "./IncomesCategories";
+import "./categories.css";
 
 class Categories extends Component {
-  render(){
+  render() {
     return (
       <div className="categories-page">
         <div className="charges-incomes-wrapper">
@@ -25,9 +25,8 @@ class Categories extends Component {
           <Route path="/categories/incomes" component={IncomesCategories} />
         </div>
       </div>
-    )
+    );
   }
-  
 }
 
 export default Categories;

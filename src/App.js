@@ -13,9 +13,9 @@ import NewCharge from "./components/New Charge/New Charge";
 function App() {
   return (
     <div className="App">
-      {/* {<NewCategory />}
+      {<NewCategory />}
       {<NewCharge />}
-      {<NewIncome />} */}
+      {<NewIncome />}
       <Header />
       <div className="container">
         <Navbar />

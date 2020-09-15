@@ -34,3 +34,7 @@ input {
 label {
   padding-top: 10px;
 }
+.select {
+  margin: 0;
+  padding: 0;
+}
