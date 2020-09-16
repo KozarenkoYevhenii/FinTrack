@@ -37,21 +37,21 @@ select{
 }
 
 .home-table td:nth-child(1), .home-table th:nth-child(1){
-    width: 200px;
+    width: 250px;
 }
   
 .home-table td:nth-child(2), .home-table th:nth-child(2){
-    width: 493px;
+    width: 551px;
 }
   
 .home-table td:nth-child(3), .home-table th:nth-child(3){
-    width: 100px;
+    width: 113px;
 }
 .home-table td:nth-child(4), .home-table th:nth-child(4){
-    width: 100px;
+    width: 90px;
 }
 .home-table td:nth-child(5), .home-table th:nth-child(5){
-    width: 30px;
+    width: 81px;
 }
 .home-table td:nth-child(5){
     text-align: center;
