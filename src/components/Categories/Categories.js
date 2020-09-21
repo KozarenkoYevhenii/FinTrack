@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import ChargesCategories from "./ChargesCategories";
 import IncomesCategories from "./IncomesCategories";
 import "./categories.css";
+import NewCategory from "../New Category/NewCategory";
 
 class Categories extends Component {
   render() {
@@ -23,6 +24,8 @@ class Categories extends Component {
           </Route>
           <Route path="/categories/charges" component={ChargesCategories} />
           <Route path="/categories/incomes" component={IncomesCategories} />
+          <Route path="/categories/newIncomes" component={NewCategory} />
+          <Route path="/categories/newCharges" component={NewCategory} />
         </div>
       </div>
     );

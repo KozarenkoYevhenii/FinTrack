@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+import Button from '../Button/Button';
 
 class IncomesCategories extends Component{
-    render(){
+    state = { addButtonClicked: false };
+    rerouteToAddMore = () => {
+        this.setState({ addButtonClicked: true });
+    };
+      render() {
+      if (this.state.addButtonClicked) {return <Redirect to="/categories/newCharges" />}
         return(
             <div>
                 <div className="categories-header">
                     <span>My Categories</span>
-                    <button className="add-btn">Add More</button>
+                    <Button name="add-btn" content="Add More" handler={this.rerouteToAddMore}/>
                 </div>
                 <table className="categories-table">
                     <thead>

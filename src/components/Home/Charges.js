@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+import Button from '../Button/Button';
 import '../Home/Home.css';
 
 export default class Charges extends Component {
-    render(){
+    state = { addButtonClicked: false };
+  rerouteToAddMore = () => {
+      this.setState({ addButtonClicked: true });
+  };
+    render() {
+    if (this.state.addButtonClicked) {return <Redirect to="/home/newCharges" />}
         return(
             <div>
                 <div className="select-panel">
@@ -15,7 +22,7 @@ export default class Charges extends Component {
                             <option value="day">today</option>
                         </select>
                     </label>
-                    <button className="add-btn">Add More</button>
+                    <Button name="add-btn" content="Add More" handler={this.rerouteToAddMore}/>
                 </div>
                 <table className="home-table">
                     <thead>

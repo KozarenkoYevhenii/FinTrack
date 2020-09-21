@@ -4,6 +4,8 @@ import Charges from './Charges';
 import Incomes from './Incomes';
 import { Route, Redirect } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import NewCharge from '../New Charge/New Charge';
+import NewIncome from '../New Income/New Income';
 
 class Home extends Component {
     render(){
@@ -25,6 +27,8 @@ class Home extends Component {
                     </Route>
                     <Route path="/home/charges" component={Charges} />
                     <Route path="/home/incomes" component={Incomes} />
+                    <Route path="/home/newCharges" component={NewCharge} />
+                    <Route path="/home/newIncomes" component={NewIncome} />
                 </div>
                 {/* <div className="select-panel">
                     <label>
