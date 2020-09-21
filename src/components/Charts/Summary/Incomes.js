@@ -27,7 +27,7 @@ const data = [
 function IncomesChart() {
   return (
     <>
-      <div>Incomes categories</div>
+      <div className="chart-title">Incomes categories</div>
     <BarChart width={730} height={250} data={data}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />

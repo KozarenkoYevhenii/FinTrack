@@ -1,3 +1,17 @@
+.btn-bar {
+  float: right;
+  align-items: center;
+}
+.chart-title {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 25px;
+}
+.charts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .add-btn{
-    float: right;
+    margin: 5px;
 }

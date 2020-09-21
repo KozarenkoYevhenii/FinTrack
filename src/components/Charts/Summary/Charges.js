@@ -42,7 +42,7 @@ const data = [
 function ChargesChart() {
   return (
     <>
-      <div>Charges categories</div>
+      <div className="chart-title">Charges categories</div>
     <PieChart width={730} height={250}>
       <Pie
         data={data}

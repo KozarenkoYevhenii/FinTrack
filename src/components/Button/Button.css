@@ -1,0 +1,9 @@
+.add-btn{
+    background-color: rgb(57, 56, 114);
+    color: rgb(223, 223, 246);
+    border-radius: 4px;
+    padding: 10px 35px;
+    outline: none;
+    border-style: none;
+    transition-duration: 0.4s;
+}

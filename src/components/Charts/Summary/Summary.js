@@ -8,6 +8,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import Button from "../../Button/Button";
 
 const data = [
   {
@@ -57,8 +58,13 @@ const data = [
 function Summary() {
   return (
     <>
-      <div>Summary</div>
-      <button className="add-btn">Add More</button>
+      <div className="charts-header">
+        <div className="chart-title">Summary</div>
+        <div className="btn-bar">
+          <Button name="add-btn" content="Week" />
+          <Button name="add-btn" content="Month" />
+        </div>
+      </div>
       <LineChart
         width={730}
         height={250}
