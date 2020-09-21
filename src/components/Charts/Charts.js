@@ -1,8 +1,16 @@
 import React from 'react';
+import IncomesChart from './Summary/Incomes';
+import Summary from './Summary/Summary';
+import './Charts.css';
+import ChargesChart from './Summary/Charges';
 
 function Charts() {
     return (
-        <div>Charts</div>
+        <div>
+            <Summary />
+            <IncomesChart />
+            <ChargesChart />
+        </div>
     )
 }
 
