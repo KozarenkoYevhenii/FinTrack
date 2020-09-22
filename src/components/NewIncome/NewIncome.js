@@ -1,15 +1,9 @@
 import React from "react";
 import Select from "react-select";
 import DatePicker from "react-datepicker";
-//import "../NewCharge/node_modules/react-datepicker/dist/react-datepicker.css";
+import "./datepicker.css";
 import "./NewIncome.css";
-import CategoryIncomeIcons from "./CategoryIncomeIcons";
-
-const options = [
-  { value: "salary", label: "work" },
-  { value: "book ", label: "book" },
-  { value: "mom", label: "mom" },
-];
+import CategoryIncomeIcons from "../NewCategory/CategoryIncomeIcons";
 
 export default class NewIncome extends React.Component {
   state = {

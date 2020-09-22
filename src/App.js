@@ -6,15 +6,14 @@ import Home from "./components/Home/Home";
 import Charts from "./components/Charts/Charts";
 import { Route, Redirect } from "react-router-dom";
 import Categories from "./components/Categories/Categories";
-import NewCategory from "./components/NewCategory/NewCategory";
-import NewIncome from "./components/NewIncome/NewIncome";
-import NewCharge from "./components/NewCharge/NewCharge";
-import NewCategoryIncome from "./components/NewCategory/NewCategoryIncome";
+// import NewCategory from "./components/NewCategory/NewCategory";
+// import NewIncome from "./components/NewIncome/NewIncome";
+// import NewCharge from "./components/NewCharge/NewCharge";
+// import NewCategoryIncome from "./components/NewCategory/NewCategoryIncome";
 
 function App() {
   return (
     <div className="App">
-      <NewCategoryIncome />
       <Header />
       <div className="container">
         <Navbar />

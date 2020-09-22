@@ -1,7 +1,8 @@
 import React from "react";
 import Select from "react-select";
 import DatePicker from "react-datepicker";
-// import "../NewIncome/node_modules/react-datepicker/dist/react-datepicker.css";
+import "../NewIncome/datepicker.css";
+
 import "./NewCharge.css";
 
 const options = [

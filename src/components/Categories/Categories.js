@@ -5,6 +5,7 @@ import ChargesCategories from "./ChargesCategories";
 import IncomesCategories from "./IncomesCategories";
 import "./categories.css";
 import NewCategory from "../NewCategory/NewCategory";
+import NewCategoryIncome from "../NewCategory/NewCategoryIncome";
 
 class Categories extends Component {
   render() {
@@ -25,7 +26,7 @@ class Categories extends Component {
           <Route path="/categories/charges" component={ChargesCategories} />
           <Route path="/categories/incomes" component={IncomesCategories} />
           <Route path="/categories/newIncomes" component={NewCategory} />
-          <Route path="/categories/newCharges" component={NewCategory} />
+          <Route path="/categories/newCharges" component={NewCategoryIncome} />
         </div>
       </div>
     );
