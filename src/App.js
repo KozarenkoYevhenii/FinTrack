@@ -9,10 +9,12 @@ import Categories from "./components/Categories/Categories";
 import NewCategory from "./components/NewCategory/NewCategory";
 import NewIncome from "./components/NewIncome/NewIncome";
 import NewCharge from "./components/NewCharge/NewCharge";
+import NewCategoryIncome from "./components/NewCategory/NewCategoryIncome";
 
 function App() {
   return (
     <div className="App">
+      <NewCategoryIncome />
       <Header />
       <div className="container">
         <Navbar />
