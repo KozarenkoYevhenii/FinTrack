@@ -1,8 +1,8 @@
 import React from "react";
 import Select from "react-select";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import "./New Income.css";
+// import "../NewCharge/node_modules/react-datepicker/dist/react-datepicker.css";
+import "./NewIncome.css";
 
 const options = [
   { value: "salary", label: "work" },

@@ -1,8 +1,8 @@
 import React from "react";
 import Select from "react-select";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import "./New Charge.css";
+// import "../NewIncome/node_modules/react-datepicker/dist/react-datepicker.css";
+import "./NewCharge.css";
 
 const options = [
   { value: "food", label: "food" },

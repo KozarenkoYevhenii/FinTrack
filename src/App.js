@@ -6,9 +6,9 @@ import Home from "./components/Home/Home";
 import Charts from "./components/Charts/Charts";
 import { Route, Redirect } from "react-router-dom";
 import Categories from "./components/Categories/Categories";
-import NewCategory from "./components/New Category/NewCategory";
-import NewIncome from "./components/New Income/New Income";
-import NewCharge from "./components/New Charge/New Charge";
+import NewCategory from "./components/NewCategory/NewCategory";
+import NewIncome from "./components/NewIncome/NewIncome";
+import NewCharge from "./components/NewCharge/NewCharge";
 
 function App() {
   return (
