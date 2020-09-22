@@ -3,7 +3,10 @@
 }
 .container{
     display: flex;
-    height: calc(100% - 94px);
+    /* height: calc(100% - 94px); */
+    /* min-height: -webkit-fill-available;
+    min-height: -moz-available; */
+    min-height: calc(100% - 94px);
 }
 .content{
     width: 100%;
