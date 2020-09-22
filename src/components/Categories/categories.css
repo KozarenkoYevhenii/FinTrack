@@ -7,10 +7,10 @@
     width: 200px;
 }
 .categories-table td:nth-child(2), .categories-table th:nth-child(2) {
-    width: 754px;
+    width: 805px;
 } 
 .categories-table td:nth-child(3), .categories-table th:nth-child(3) {
-    width: 30px;
+    width: 81px;
 }
 .categories-table td:nth-child(3){
     text-align: center;

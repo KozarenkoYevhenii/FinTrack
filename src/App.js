@@ -13,14 +13,14 @@ import NewCharge from "./components/NewCharge/NewCharge";
 function App() {
   return (
     <div className="App">
-      {<NewCategory />}
-      {<NewCharge />}
-      {<NewIncome />}
       <Header />
       <div className="container">
         <Navbar />
         <div className="content">
           <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
+          <Route exact path="/FinTrack">
             <Redirect to="/home" />
           </Route>
           <Route path="/home" component={Home} />

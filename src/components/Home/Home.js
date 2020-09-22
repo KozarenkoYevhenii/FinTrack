@@ -1,32 +1,36 @@
-import React, { Component } from 'react';
-import './Home.css';
-import Charges from './Charges';
-import Incomes from './Incomes';
+import React, { Component } from "react";
+import "./Home.css";
+import Charges from "./Charges";
+import Incomes from "./Incomes";
 import { Route, Redirect } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import NewCharge from "../NewCharge/NewCharge";
+import NewIncome from "../NewIncome/NewIncome";
 
 class Home extends Component {
-    render(){
-        return(
-            <div className="home-page">
-                <div className="charges-incomes-wrapper">
-                    <div className="charges-incomes">
-                        {/* Charges */}
-                        <NavLink to="/home/charges">Charges</NavLink>
-                    </div>
-                    <div className="charges-incomes">
-                        {/* Incomes */}
-                        <NavLink to="/home/incomes">Incomes</NavLink>
-                    </div>
-                </div>
-                <div>
-                    <Route exact path="/home">
-                        <Redirect to="/home/charges" />
-                    </Route>
-                    <Route path="/home/charges" component={Charges} />
-                    <Route path="/home/incomes" component={Incomes} />
-                </div>
-                {/* <div className="select-panel">
+  render() {
+    return (
+      <div className="home-page">
+        <div className="charges-incomes-wrapper">
+          <div className="charges-incomes">
+            {/* Charges */}
+            <NavLink to="/home/charges">Charges</NavLink>
+          </div>
+          <div className="charges-incomes">
+            {/* Incomes */}
+            <NavLink to="/home/incomes">Incomes</NavLink>
+          </div>
+        </div>
+        <div>
+          <Route exact path="/home">
+            <Redirect to="/home/charges" />
+          </Route>
+          <Route path="/home/charges" component={Charges} />
+          <Route path="/home/incomes" component={Incomes} />
+          <Route path="/home/newCharges" component={NewCharge} />
+          <Route path="/home/newIncomes" component={NewIncome} />
+        </div>
+        {/* <div className="select-panel">
                     <label>
                         <span>My Charges</span>
                         <select className="period-input">
@@ -82,10 +86,9 @@ class Home extends Component {
                         <td>...</td>
                     </tr>
                 </table> */}
-            </div>
-        )
-    }
-        
+      </div>
+    );
+  }
 }
 
 export default Home;
