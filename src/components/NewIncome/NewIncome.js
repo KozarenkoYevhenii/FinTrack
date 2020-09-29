@@ -4,21 +4,44 @@ import DatePicker from "react-datepicker";
 import "./datepicker.css";
 import "./NewIncome.css";
 import CategoryIncomeIcons from "../NewCategory/CategoryIncomeIcons";
+import store from "store";
+import Button from "../Button/Button";
+
+const options = [
+  { value: "Salary", label: "Salary" },
+  { value: "Freelance", label: "Freelance" },
+  { value: "Sold stuff", label: "Sold stuff" },
+];
+const time = new Date();
+const date =
+  time.getMonth() + 1 + "/" + time.getDate() + "/" + time.getFullYear();
 
 export default class NewIncome extends React.Component {
   state = {
-    selectedOption: null,
-    startDate: new Date(),
+    category: null,
+    description: "",
+    date: date,
+    money: "",
+    action: "...",
   };
 
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption });
-    console.log(`Option selected:`, selectedOption);
+  handleTotalChange = (e) => {
+    this.setState({ money: `$${e.target.value}` });
+  };
+  handleDescriptionChange = (e) => {
+    this.setState({ description: e.target.value });
+  };
+  handleChange = (e) => {
+    this.setState({ category: e.value });
   };
   handleChangeDate = (date) => {
     this.setState({
-      startDate: date,
+      date:
+        date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear(),
     });
+  };
+  addNewCharge = () => {
+    store.set("incomes", [...store.get("incomes"), this.state]);
   };
   render() {
     const { selectedOption } = this.state;
@@ -34,17 +57,23 @@ export default class NewIncome extends React.Component {
                 name="total"
                 placeholder=""
                 //   value={this.state.search}
-                //   onChange={this.handleSearchChange}
+                onChange={this.handleTotalChange}
               ></input>
               <label> Description </label>
               <input
                 name="description"
                 placeholder="Enter description of category"
                 //   value={this.state.search}
-                //   onChange={this.handleSearchChange}
+                onChange={this.handleDescriptionChange}
               ></input>
               <label> Select category of income </label>
-              <CategoryIncomeIcons />
+              <Select
+                className="select-line"
+                value={selectedOption}
+                onChange={this.handleChange}
+                options={options}
+              />
+              {/* <CategoryIncomeIcons /> */}
               {/* <Select
                 className="select-line"
                 value={selectedOption}
@@ -54,13 +83,15 @@ export default class NewIncome extends React.Component {
               <div className="date-wrapper">
                 <div>Date</div>
                 <DatePicker
-                  selected={this.state.startDate}
+                  selected={Date.now()}
                   onChange={this.handleChangeDate}
                 />
               </div>
-              <button className="button" name="Add new category">
-                Add new income
-              </button>
+              <Button
+                name="button"
+                content="Add new income"
+                handler={this.addNewCharge}
+              />
             </form>
           </div>
         </div>

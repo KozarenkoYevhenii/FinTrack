@@ -1,12 +1,21 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import Button from "../Button/Button";
+import store from "store";
+import IncomeTr from "../incomeTr/incomeTr"
 
 export default class Incomes extends Component {
   state = { addButtonClicked: false };
   rerouteToAddMore = () => {
       this.setState({ addButtonClicked: true });
   };
+  componentDidMount() {
+    store.get("incomes")?.length
+      ? store.set("incomes", [
+          ...store.get("incomes"),
+        ])
+      : store.set("incomes", []);
+  }
     render() {
     if (this.state.addButtonClicked) {return <Redirect to="/home/newIncomes" />}
     return (
@@ -38,34 +47,9 @@ export default class Incomes extends Component {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Salary</td>
-              <td></td>
-              <td>12/09/2020</td>
-              <td>$2000</td>
-              <td>...</td>
-            </tr>
-            <tr>
-              <td>Salary</td>
-              <td></td>
-              <td>11/08/2020</td>
-              <td>$2000</td>
-              <td>...</td>
-            </tr>
-            <tr>
-              <td>Salary</td>
-              <td></td>
-              <td>10/07/2020</td>
-              <td>$2000</td>
-              <td>...</td>
-            </tr>
-            <tr>
-              <td>Selling unnecessary staff</td>
-              <td>Sold book</td>
-              <td>02/07/2020</td>
-              <td>$5</td>
-              <td>...</td>
-            </tr>
+          {store.get("incomes")?.map((charge) => (
+              <IncomeTr props={charge} />
+            ))}
           </tbody>
         </table>
       </div>
